@@ -54,8 +54,8 @@ header {
   background-color: var(--color-bg-alt);
   padding: 1rem 0;
   border-bottom: 2px solid var(--color-primary);
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   z-index: 1000;
 }
 
