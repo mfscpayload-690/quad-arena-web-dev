@@ -372,11 +372,6 @@ footer {
     font-size: 1rem;
   }
 
-  nav ul li:not(:last-child) a::after {
-    content: " - ";
-    color: var(--color-accent);
-    padding-left: 0.3rem;
-  }
 
   /* Projects grid: single column */
   .projects-grid {

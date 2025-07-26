@@ -19,6 +19,11 @@ This is the personal portfolio website of mine, a cybersecurity enthusiast and B
 
 Simply open the `index.html` file in any modern web browser to view the portfolio website locally.
 
+## Recent Updates
+
+- Improved navigation tabs display on smartphone/small screen views to show tabs horizontally in one or two lines for better visibility and usability.
+- The website is hosted and accessible online at: https://mfscpayload-690.github.io/quad-arena-web-dev/index.html
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
