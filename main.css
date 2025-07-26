@@ -1,0 +1,428 @@
+/* main.css - Core styling for Aravind Lal's portfolio website */
+
+/* Color Palette */
+:root {
+  --color-bg: #0a0f1a;
+  --color-bg-alt: #121a33;
+  --color-primary: #1e40af; /* Finnish blue */
+  --color-accent: #3b82f6; /* Neon blue accent */
+  --color-white: #f0f4f8;
+  --color-gray-light: #a0aec0;
+  --color-gray-dark: #4a5568;
+  --color-neon: #00ffff;
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.6;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-neon);
+  outline: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Header */
+header {
+  background-color: var(--color-bg-alt);
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header p.tagline {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  max-width: 100% !important;
+  color: var(--color-gray-light);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-left: 0 !important;
+}
+
+header h1 {
+  white-space: nowrap;
+  margin: 0;
+}
+
+header p.tagline {
+  flex-grow: 0;
+  margin-left: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: none;
+  font-size: 0.9rem;
+  color: var(--color-gray-light);
+  font-style: italic;
+}
+
+
+header h1 {
+  white-space: nowrap;
+}
+
+header p.tagline {
+  flex-grow: 0;
+  margin-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60vw;
+}
+
+header h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+header p.tagline {
+  font-size: 0.9rem;
+  color: var(--color-gray-light);
+  margin-left: 1rem;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  outline: none;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-bg-alt);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* Section Titles */
+section h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--color-primary);
+  padding-left: 0.5rem;
+}
+
+/* About Section */
+#about p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: var(--color-gray-light);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px var(--color-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--color-neon);
+  outline: none;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--color-white);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.project-card p {
+  color: var(--color-gray-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover,
+.badge:focus {
+  background-color: var(--color-neon);
+  color: var(--color-bg);
+  outline: none;
+}
+
+/* Skills Section */
+.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Goals Section */
+#goals ul {
+  list-style: disc inside;
+  max-width: 700px;
+  color: var(--color-gray-light);
+  font-size: 1.1rem;
+}
+
+/* Connect Section */
+.connect-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.connect-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connect-button:hover,
+.connect-button:focus {
+  background-color: var(--color-neon);
+  color: var(--color-bg);
+  outline: none;
+}
+
+/* Visitor Badge Placeholder */
+.visitor-badge {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: var(--color-gray-light);
+  font-family: 'Courier New', Courier, monospace;
+  user-select: none;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-bg-alt);
+  text-align: center;
+  padding: 1rem 0;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-top: 2px solid var(--color-primary);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: var(--color-primary);
+  }
+  50% {
+    color: var(--color-neon);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header p.tagline {
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* Additional responsive styles for smartphones */
+@media (max-width: 480px) {
+  /* Header: stack and center align */
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  header p.tagline {
+    margin-left: 0;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Navigation: vertical stack */
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Projects grid: single column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Project card adjustments */
+  .project-card {
+    padding: 1rem 0.8rem;
+  }
+
+  /* Section titles smaller */
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* About section paragraph smaller */
+  #about p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Skills badges wrap and spacing */
+  .skills-group {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  /* Connect buttons wrap and spacing */
+  .connect-buttons {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .connect-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+  }
+
+  /* Section padding adjustments */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* Footer font size smaller */
+  footer {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+}
