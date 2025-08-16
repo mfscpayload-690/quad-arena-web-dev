@@ -243,6 +243,59 @@ section h2 {
   margin-top: 1rem;
 }
 
+.skills-description {
+  color: var(--color-gray-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* Core Interests Section */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.interest-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  background-color: var(--color-bg-alt);
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+}
+
+/* GitHub Stats Section */
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.stat-card {
+  background-color: var(--color-bg-alt);
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--color-primary);
+}
+
+.stat-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 /* Goals Section */
 #goals ul {
   list-style: disc inside;
@@ -427,5 +480,26 @@ footer {
   footer {
     font-size: 1rem;
     padding: 0.8rem 0;
+  }
+
+  /* Interests grid mobile adjustments */
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .interest-group {
+    justify-content: center;
+    padding: 0.4rem;
+  }
+
+  /* GitHub stats grid mobile adjustments */
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 0.3rem;
   }
 }
